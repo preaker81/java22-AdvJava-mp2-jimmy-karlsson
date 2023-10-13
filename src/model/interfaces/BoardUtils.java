@@ -1,14 +1,14 @@
 package model.interfaces;
 
 import model.Board;
-import utils.enums.Mark;
+import utils.enums.GameSymbol;
 
-public interface BoardUtilityOperations {
+public interface BoardUtils {
 	Board copyBoard();
 
 	boolean hasEmptyCells();
 
 	void printBoard();
 
-	Mark getBoardCell(int row, int col);
+	GameSymbol getBoardCell(int row, int col);
 }

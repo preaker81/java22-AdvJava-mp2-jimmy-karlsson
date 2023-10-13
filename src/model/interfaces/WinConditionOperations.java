@@ -1,6 +1,6 @@
 package model.interfaces;
 
-public interface BoardWinOperations {
+public interface WinConditionOperations {
 	boolean isWinner();
 
 	boolean isDraw();

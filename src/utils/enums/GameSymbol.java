@@ -1,11 +1,11 @@
 package utils.enums;
 
-public enum Mark {
+public enum GameSymbol {
 	X("X"), O("O"), EMPTY("-");
 
 	private final String symbol;
 
-	Mark(String symbol) {
+	GameSymbol(String symbol) {
 		this.symbol = symbol;
 	}
 

@@ -2,7 +2,7 @@ package main;
 
 import javax.swing.SwingUtilities;
 
-import ticTacToe.TicTacToeGUI;
+import view.TicTacToeGUI;
 
 public class Main {
 

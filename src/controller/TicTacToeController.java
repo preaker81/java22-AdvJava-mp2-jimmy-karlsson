@@ -57,6 +57,10 @@ public class TicTacToeController {
 		if (isValidMove(row, col)) {
 			board.placeMark(currentPlayer, row, col);
 			switchPlayer();
+
+			// Print the best move for the next player
+			Move bestMove = provideHint();
+			System.out.println("Best move for " + currentPlayer + ": (" + bestMove.row + ", " + bestMove.col + ")");
 		}
 	}
 
@@ -110,7 +114,19 @@ public class TicTacToeController {
 	 * @return Move chosen by the AI.
 	 */
 	public Move aiMove() {
-		return ai.minMax(board, currentPlayer);
+		Move bestMove = ai.minMax(board, currentPlayer);
+
+		if (bestMove != null) {
+			board.placeMark(currentPlayer, bestMove.row, bestMove.col);
+			switchPlayer();
+
+			// Print the best move for the next player
+			Move nextBestMove = provideHint();
+			System.out.println(
+					"Best move for " + currentPlayer + ": (" + nextBestMove.row + ", " + nextBestMove.col + ")");
+		}
+
+		return bestMove;
 	}
 
 	/**

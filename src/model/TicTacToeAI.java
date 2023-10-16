@@ -146,8 +146,8 @@ public class TicTacToeAI {
 
 	// Inner class to represent a move in the TicTacToe game
 	public class Move {
-		private int row;
-		private int col;
+		public int row;
+		public int col;
 		private int score;
 
 		public Move(int score) {
